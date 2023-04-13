@@ -3,9 +3,12 @@
 //Ступінь передається як другий аргумент у функціюpow (num, degree).
 
 function numInDegree (num, degree) {
-    if (num == 1 || num == 0) return num;
-    if (degree > 1) return num * numInDegree(num, --degree);
-    if (degree < 1) return 1 / num * numInDegree(num, ++degree);
-    return num;
-}
-console.log(numInDegree(3, 3))
+    return degree === 1 || 0 ? num : degree > 1 ? num * numInDegree(num, --degree) : 1 / num * numInDegree(num, ++degree);
+}    
+console.log(numInDegree(5, 5));
+
+
+
+
+
+
